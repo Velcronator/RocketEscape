@@ -1,43 +1,20 @@
 fileFormatVersion: 2
-guid: f139fe847a239a948b66b65c4cd4339f
+guid: 0368ed0264c088d49b8488f4dbdb9dc9
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Fins01
-    100002: Fins02
-    100004: Fins03
-    100006: RocketBody
-    100008: //RootNode
-    100010: RocketTip
-    400000: Fins01
-    400002: Fins02
-    400004: Fins03
-    400006: RocketBody
-    400008: //RootNode
-    400010: RocketTip
+    100000: //RootNode
+    100002: SM_Hotel_Blue_01
+    400000: //RootNode
+    400002: SM_Hotel_Blue_01
     2100000: Red
-    2100002: Material
-    2300000: Fins01
-    2300002: Fins02
-    2300004: Fins03
-    2300006: RocketBody
-    2300008: RocketTip
-    3300000: Fins01
-    3300002: Fins02
-    3300004: Fins03
-    3300006: RocketBody
-    3300008: RocketTip
-    4300000: Fins01
-    4300002: Fins02
-    4300004: Fins03
-    4300006: RocketBody
-    4300008: RocketTip
-    6400000: Fins01
-    6400002: Fins02
-    6400004: Fins03
-    6400006: RocketBody
-    6400008: RocketTip
-    2186277476908879412: ImportLogs
+    2100002: Off White
+    2100004: Black
+    2100006: Blue
+    2300000: SM_Hotel_Blue_01
+    3300000: SM_Hotel_Blue_01
+    4300000: SM_Hotel_Blue_01
+    6400000: SM_Hotel_Blue_01
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -71,7 +48,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
