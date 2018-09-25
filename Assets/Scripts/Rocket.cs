@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour
@@ -14,17 +15,17 @@ public class Rocket : MonoBehaviour
 
     Rigidbody rigidBody;
     AudioSource audioSource;
-    BoxCollider2D boxCollider;
 
     enum State { Alive, Dying, Transcending };
     State state = State.Alive;
     float loadLevelDelay = 1f;
 
+    //debug: C toggle collisions and L for next level in Debug Conditions
+    private bool collisionsAreEnabled = true;
 
     // Use this for initialization
     void Start()
     {
-        boxCollider = GetComponent<BoxCollider2D>();
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
     }
@@ -37,11 +38,27 @@ public class Rocket : MonoBehaviour
             RespondToThrustInput();
             RespondToRotateInput();
         }
+        if (Debug.isDebugBuild)
+        {
+            DebugConditions();
+        }
+    }
+
+    private void DebugConditions()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            collisionsAreEnabled = !collisionsAreEnabled;
+        }
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (state != State.Alive){return;}// guard condition only to ignore collisions when dead
+        if (state != State.Alive || !collisionsAreEnabled) { return;}// guard condition only to ignore collisions when dead
 
         if (collision.contacts[0].thisCollider.name == "RocketBody")
         {
@@ -58,7 +75,7 @@ public class Rocket : MonoBehaviour
                 break;
             case "Finish":
                 LoadNextLevel();
-            break;
+                break;
             default:
                 print("Ouch.");
                 break;
@@ -80,7 +97,7 @@ public class Rocket : MonoBehaviour
         audioSource.Stop();
         audioSource.PlayOneShot(nextlevelClip);
         nextlevelParticles.Play();
-        Invoke("LoadNextScene", loadLevelDelay); //todo parametise time
+        Invoke("LoadNextScene", loadLevelDelay); 
     }
 
     private void LoadSamelevel()
@@ -111,9 +128,14 @@ public class Rocket : MonoBehaviour
         }
         else
         {
-            audioSource.Stop();
-            mainEngineParticles.Stop();
+            StopApplyTrust();
         }
+    }
+
+    private void StopApplyTrust()
+    {
+        audioSource.Stop();
+        mainEngineParticles.Stop();
     }
 
     private void ApplyTrust()
@@ -124,13 +146,11 @@ public class Rocket : MonoBehaviour
             audioSource.PlayOneShot(mainEngineClip);
         }
         mainEngineParticles.Play();
-
     }
 
     private void RespondToRotateInput()
     {
-        rigidBody.freezeRotation = true; // take manual control of rotation
-
+        rigidBody.angularVelocity = Vector3.zero; //stop the phsics engine rotating the object.
         float rotationThisFrame = rcsThrust * Time.deltaTime;
         if (Input.GetKey(KeyCode.A))
         {
@@ -140,7 +160,7 @@ public class Rocket : MonoBehaviour
         {
             transform.Rotate(-Vector3.forward * rotationThisFrame);
         }
-
-        rigidBody.freezeRotation = false; // resume physics control of rotation
     }
 }
+
+
