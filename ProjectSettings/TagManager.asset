@@ -8,6 +8,8 @@ TagManager:
   - Fuel
   - Bullet
   - Obstacle
+  - Waypoint
+  - waypointfollower
   layers:
   - Default
   - TransparentFX
