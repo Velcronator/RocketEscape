@@ -34,8 +34,6 @@ public class CompleteCameraController : MonoBehaviour
                 target = player.transform;
                 break;
         }
-
-        Debug.Log(target);
     }
 
     // LateUpdate is called after Update each frame

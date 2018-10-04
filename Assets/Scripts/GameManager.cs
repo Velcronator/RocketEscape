@@ -35,9 +35,4 @@ public class GameManager : MonoBehaviour
 
         instance = this;
     }
-
-    private void Update()
-    {
-        Debug.Log(introIsComplete);
-    }
 }

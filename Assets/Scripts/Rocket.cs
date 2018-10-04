@@ -33,7 +33,8 @@ public class Rocket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        if(state == State.Alive)
+        //if player is alive, and the intro is complete in the GameManager class
+        if(state == State.Alive && GameManager.Instance.introIsComplete)
         {
             RespondToThrustInput();
             RespondToRotateInput();
@@ -74,6 +75,7 @@ public class Rocket : MonoBehaviour
                 DyingScene();
                 break;
             case "Finish":
+                GameManager.Instance.introIsComplete = false;
                 LoadNextLevel();
                 break;
             default:
