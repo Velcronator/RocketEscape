@@ -1632,6 +1632,21 @@ Prefab:
       propertyPath: waypoints.Array.data[6]
       value: 
       objectReference: {fileID: 825280999}
+    - target: {fileID: 114853618958065880, guid: 5a6671edd5218664089cae3da6a0f585,
+        type: 2}
+      propertyPath: introCamAccuracy
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114853618958065880, guid: 5a6671edd5218664089cae3da6a0f585,
+        type: 2}
+      propertyPath: introCamSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114853618958065880, guid: 5a6671edd5218664089cae3da6a0f585,
+        type: 2}
+      propertyPath: introCamAngularSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a6671edd5218664089cae3da6a0f585, type: 2}
   m_IsPrefabAsset: 0

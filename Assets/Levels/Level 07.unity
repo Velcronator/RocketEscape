@@ -421,8 +421,8 @@ MonoBehaviour:
   - {fileID: 2064619137}
   - {fileID: 2115824638}
   introCamSpeed: 15
-  introCamAngularSpeed: 4
-  introCamAccuracy: 2
+  introCamAngularSpeed: 10
+  introCamAccuracy: 10
 --- !u!33 &196008676
 MeshFilter:
   m_ObjectHideFlags: 0

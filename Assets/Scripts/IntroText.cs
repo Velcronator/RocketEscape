@@ -14,7 +14,7 @@ public class IntroText : MonoBehaviour
         introText = gameObject.GetComponent<Text>();
         currentScene = SceneManager.GetActiveScene();
 
-        coroutine = WaitAndPrint(3.0f);
+        coroutine = WaitAndPrint(2f);
         StartCoroutine(coroutine);
         
         //during Intro, set text
