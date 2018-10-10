@@ -447,6 +447,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> d57c518bf8f8bf168020055c0c99bbdc97365f5f
 --- !u!1001 &240205998
 Prefab:
   m_ObjectHideFlags: 0
