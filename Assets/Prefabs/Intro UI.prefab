@@ -150,7 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2429c7ffaf7e61a4d9604d3737384a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  introCountdown: 3
 --- !u!114 &114599070332156980
 MonoBehaviour:
   m_ObjectHideFlags: 1

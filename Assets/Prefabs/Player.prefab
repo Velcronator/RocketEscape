@@ -58,8 +58,6 @@ GameObject:
   - component: {fileID: 54536123257072048}
   - component: {fileID: 82700883892273706}
   - component: {fileID: 114591526762078482}
-  - component: {fileID: 135102945813018392}
-  - component: {fileID: 114950982024291534}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -696,29 +694,6 @@ MonoBehaviour:
   mainEngineParticles: {fileID: 198957983468361444}
   nextlevelParticles: {fileID: 198690316606141780}
   deathParticles: {fileID: 198411737403671908}
---- !u!114 &114950982024291534
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1175327220926706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4ea39061277cb4691e33192e83114a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!135 &135102945813018392
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1175327220926706}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.15
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198411737403671908
 ParticleSystem:
   m_ObjectHideFlags: 1
