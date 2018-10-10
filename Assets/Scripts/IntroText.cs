@@ -15,10 +15,7 @@ public class IntroText : MonoBehaviour
         introText = gameObject.GetComponent<Text>();
         currentScene = SceneManager.GetActiveScene();
 
-<<<<<<< HEAD
         coroutine = WaitforSeconds(introCountdown);
-=======
-        coroutine = WaitAndPrint(2f);
 >>>>>>> d57c518bf8f8bf168020055c0c99bbdc97365f5f
         StartCoroutine(coroutine);
         
