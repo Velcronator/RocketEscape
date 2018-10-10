@@ -16,7 +16,6 @@ public class IntroText : MonoBehaviour
         currentScene = SceneManager.GetActiveScene();
 
         coroutine = WaitforSeconds(introCountdown);
->>>>>>> d57c518bf8f8bf168020055c0c99bbdc97365f5f
         StartCoroutine(coroutine);
         
         //during Intro, set text
