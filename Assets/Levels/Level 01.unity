@@ -388,7 +388,7 @@ Prefab:
     - target: {fileID: 65347729904004732, guid: 3e7f7d8e0ada8a24796b2162ee0fbcc0,
         type: 2}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e7f7d8e0ada8a24796b2162ee0fbcc0, type: 2}
@@ -571,6 +571,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4425075957696826, guid: e118171b6147ea841ba9e859dcf9083d, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64775729506137426, guid: e118171b6147ea841ba9e859dcf9083d,
+        type: 2}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1373,6 +1378,11 @@ Prefab:
     - target: {fileID: 1745121264449938, guid: 3e7f7d8e0ada8a24796b2162ee0fbcc0, type: 2}
       propertyPath: m_Name
       value: Obstacle (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 65347729904004732, guid: 3e7f7d8e0ada8a24796b2162ee0fbcc0,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e7f7d8e0ada8a24796b2162ee0fbcc0, type: 2}
