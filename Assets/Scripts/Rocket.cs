@@ -75,7 +75,6 @@ public class Rocket : MonoBehaviour
                 DyingScene();
                 break;
             case "Finish":
-                GameManager.Instance.introIsComplete = false;
                 LoadNextLevel();
                 break;
             default:
@@ -103,12 +102,15 @@ public class Rocket : MonoBehaviour
     }
 
     private void LoadSamelevel()
-    {
+    { 
+        GameManager.Instance.introIsComplete = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void LoadNextScene()
     {
+
+        GameManager.Instance.introIsComplete = false;
         // check if there is another scene in build settings after this one
         if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
